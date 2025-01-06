@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="">
   <head>
     <meta charset="utf-8" />
@@ -6,36 +6,97 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>CV</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </header>
+    <h1 class="title">Leyna Watson May</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li>CV</li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <main>
-      <div class="section about">
+      <div class="section about" id="about">
         <div class="about-left">
-          <h2>Leyna Watson May</h2>
+          <h2>About me</h2>
           <p>This is about me.</p>
         </div>
-        <img src="assets/poster.jpg" class="about-image"> </img>
-        
+        <img src="assets/poster.jpg" class="about-image" />
       </div>
-      <div class="section">
-        <div class="projects">
-          <h2>Projects</h2>
-          <h3> Bouncing ball</h3>
-          <p>I have made a bouncing ball simulator.</p>
+      <div class="section projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-cards-container">
+          <div class="project">
+            <div class="projects-left">
+              <h3>Tilt game</h3>
+              <p>
+                I have made a game, try it
+                <a
+                  href="https://leynamay.com/Tilt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >here</a
+                >.
+              </p>
+            </div>
+            <img src="assets/tilt.png" class="projects-image" />
+          </div>
+          <div class="project">
+            <div class="projects-left">
+              <h3>Bouncing ball</h3>
+              <p>I have made a bouncing ball simulator.</p>
+            </div>
+            <img src="assets/poster.jpg" class="projects-image" />
+          </div>
+          <div class="project">
+            <div class="projects-left">
+              <h3>Shaders</h3>
+              <p>I have made some shaders.</p>
+            </div>
+            <img src="assets/poster.jpg" class="projects-image" />
+          </div>
+          <div class="project">
+            <div class="projects-left">
+              <h3>Graph theory</h3>
+              <p>
+                I used Python to generate graphs, contributing to a
+                <a
+                  href="https://doi.org/10.1016/j.disc.2019.111767"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >publication</a
+                >.
+              </p>
+            </div>
+            <img src="assets/poster.jpg" class="projects-image" />
+          </div>
         </div>
       </div>
       <div class="section">
-        <div class="contact">
+        <div class="contact" id="contact">
           <h2>Contact</h2>
-         <p>Contact me</p>
+          <ul>
+            <li>
+              Email: <a href="mailto:leynamay@gmail.com">leynamay@gmail.com</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/leyna-watson-may-b361b0276/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              GitHub:
+              <a
+                href="https://github.com/LeynaM"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LeynaM</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </main>
