@@ -63,6 +63,7 @@ nav {
 
 .about-left {
   flex-grow: 1;
+  margin-right: 24px;
 }
 
 .about-image {
