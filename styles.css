@@ -34,7 +34,6 @@ ul {
 
 nav {
   color: var(--fg-0);
-  width: 100%;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -92,9 +91,8 @@ a:hover {
 
 .project-cards-container {
   gap: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .project-card {
