@@ -1,5 +1,6 @@
 body {
   background-color: var(--bg-0);
+  font-family: "Inter";
   margin: 0px;
   /* margin-left: 64px;
     margin-right: 64px; */
@@ -48,7 +49,7 @@ nav {
 .section {
   background-color: var(--bg-1);
   color: var(--fg-1);
-  padding: 32px;
+  padding: 32px 48px;
 }
 
 .section:nth-child(even) {
@@ -66,7 +67,7 @@ nav {
 }
 
 .about-image {
-  max-width: 25%;
+  max-width: 20%;
 }
 
 .contact {
@@ -126,4 +127,36 @@ a:hover {
 h2,
 h3 {
   margin-top: 0;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.feather {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+
+.contact a {
+  display: flex;
+  gap: 8px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+p a {
+  text-decoration: underline;
 }
