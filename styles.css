@@ -170,6 +170,11 @@ p a {
   text-decoration: underline;
 }
 
+p .feather {
+  height: 14px;
+  width: 14px;
+}
+
 .icon-only {
   display: none !important;
 }
