@@ -77,7 +77,11 @@
             />
           </a>
           <!-- BOUNCING BALL -->
-          <a class="project-card" href="https://leynamay.com/ball-on-slope">
+          <a
+            id="bouncing-ball-card"
+            class="project-card"
+            href="https://leynamay.com/ball-on-slope"
+          >
             <div class="project-card__text">
               <h3>Bouncing ball</h3>
               <p>
@@ -87,7 +91,22 @@
                 simulation to show how the ball reacts.
               </p>
             </div>
-            <img src="assets/bouncing-ball.png" class="project-card__image" />
+            <img
+              id="bouncing-ball-image"
+              src="assets/bouncing-ball/bouncing-ball.jpg"
+              class="project-card__image"
+            />
+          </a>
+          <!-- PHD -->
+          <a class="project-card" href="assets/thesis.pdf">
+            <div class="project-card__text">
+              <h3>PhD project</h3>
+              <p>
+                My PhD is in algebraic topology, and my thesis is titled `Hidden
+                Symmetries, Trees and Operads'.
+              </p>
+            </div>
+            <img src="assets/thesis.jpg" class="project-card__image" />
           </a>
           <!-- GRAPH THEORY -->
           <a
@@ -105,16 +124,17 @@
             </div>
             <img src="assets/graph.svg" class="project-card__image" />
           </a>
-          <!-- PHD -->
-          <a class="project-card" href="assets/thesis.pdf">
+          <!-- Masters -->
+          <a class="project-card" href="assets/masters-thesis.pdf">
             <div class="project-card__text">
-              <h3>PhD project</h3>
+              <h3>Masters project</h3>
               <p>
-                My PhD is in algebraic topology, and my thesis is titled `Hidden
-                Symmetries, Trees and Operads'.
+                My masters was in low-dimensional differential topology, and my
+                thesis is titled `Morse Theory: Morse-Bott Functions and
+                Homology'.
               </p>
             </div>
-            <img src="assets/thesis.png" class="project-card__image" />
+            <img src="assets/masters-thesis.jpg" class="project-card__image" />
           </a>
         </div>
       </div>
@@ -172,6 +192,7 @@
     <script>
       feather.replace();
 
+      // Tilt game gif on ohver
       const tiltGameCard = document.getElementById("tilt-game-card");
       const tiltGameImage = document.getElementById("tilt-game-image");
       let param = 1;
@@ -182,6 +203,19 @@
 
       tiltGameCard.addEventListener("mouseleave", () => {
         tiltGameImage.src = "assets/tilt-game/tilt-game.jpg";
+      });
+
+      // Bouncing ball gif on hover
+      const bouncingBallCard = document.getElementById("bouncing-ball-card");
+      const bouncingBallImage = document.getElementById("bouncing-ball-image");
+      bouncingBallCard.addEventListener("mouseenter", () => {
+        param++; // increment param to force reload;
+        bouncingBallImage.src =
+          "assets/bouncing-ball/bouncing-ball.gif" + "?p=" + param;
+      });
+
+      bouncingBallCard.addEventListener("mouseleave", () => {
+        bouncingBallImage.src = "assets/bouncing-ball/bouncing-ball.jpg";
       });
     </script>
   </body>
