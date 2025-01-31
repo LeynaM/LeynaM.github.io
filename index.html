@@ -13,8 +13,11 @@
       rel="stylesheet"
     />
   </head>
+
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
   <body>
+    <!-- HEADER -->
     <h1 class="title">Leyna May</h1>
     <nav>
       <ul>
@@ -23,7 +26,10 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- MAIN -->
     <main>
+      <!-- ABOUT -->
       <div class="section about">
         <a class="anchor" id="about"></a>
         <div class="about-left">
@@ -44,12 +50,18 @@
         </div>
         <img src="assets/poster.jpg" class="about-image" />
       </div>
+
+      <!-- PROJECTS -->
       <div class="section projects">
         <a class="anchor" id="projects"></a>
         <h2>Projects</h2>
         <div class="project-cards-container">
-          <a class="project-card" href="https://leynamay.com/tilt-game">
-            <!-- <div class="project-card"> -->
+          <!-- TILT GAME -->
+          <a
+            id="tilt-game-card"
+            class="project-card"
+            href="https://leynamay.com/tilt-game"
+          >
             <div class="project-card__text">
               <h3>Tilt game</h3>
               <p>
@@ -58,9 +70,13 @@
                 successively more difficult, with the addition of more holes.
               </p>
             </div>
-            <img src="assets/tilt.png" class="project-card__image" />
-            <!-- </div> -->
+            <img
+              id="tilt-game-image"
+              src="assets/tilt-game/tilt-game.jpg"
+              class="project-card__image"
+            />
           </a>
+          <!-- BOUNCING BALL -->
           <a class="project-card" href="https://leynamay.com/ball-on-slope">
             <div class="project-card__text">
               <h3>Bouncing ball</h3>
@@ -73,6 +89,7 @@
             </div>
             <img src="assets/bouncing-ball.png" class="project-card__image" />
           </a>
+          <!-- GRAPH THEORY -->
           <a
             class="project-card"
             href="https://doi.org/10.1016/j.disc.2019.111767"
@@ -88,6 +105,7 @@
             </div>
             <img src="assets/graph.svg" class="project-card__image" />
           </a>
+          <!-- PHD -->
           <a class="project-card" href="assets/thesis.pdf">
             <div class="project-card__text">
               <h3>PhD project</h3>
@@ -98,18 +116,10 @@
             </div>
             <img src="assets/thesis.png" class="project-card__image" />
           </a>
-          <a
-            class="project-card"
-            href="https://github.com/LeynaM/the-book-of-shaders"
-          >
-            <div class="project-card__text">
-              <h3>Shaders</h3>
-              <p>I am currently working through The Book of Shaders.</p>
-            </div>
-            <img src="assets/shader.png" class="project-card__image" />
-          </a>
         </div>
       </div>
+
+      <!-- CONTACT -->
       <div class="section">
         <a class="anchor" id="contact"></a>
         <div class="contact">
@@ -158,9 +168,21 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+
     <script>
       feather.replace();
+
+      const tiltGameCard = document.getElementById("tilt-game-card");
+      const tiltGameImage = document.getElementById("tilt-game-image");
+      let param = 1;
+      tiltGameCard.addEventListener("mouseenter", () => {
+        param++; // increment param to force reload;
+        tiltGameImage.src = "assets/tilt-game/tilt-game.gif" + "?p=" + param;
+      });
+
+      tiltGameCard.addEventListener("mouseleave", () => {
+        tiltGameImage.src = "assets/tilt-game/tilt-game.jpg";
+      });
     </script>
   </body>
 </html>
