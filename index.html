@@ -1,241 +1,255 @@
 <!doctype html>
-<html lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Leyna May</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<html lang="en">
 
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leyna May-Gurr</title>
+  <meta name="description"
+    content="Leyna May-Gurr — software developer with a PhD in algebraic topology. Portfolio of projects, games and simulations." />
+  <meta property="og:title" content="Leyna May-Gurr" />
+  <meta property="og:description"
+    content="Software developer with a PhD in algebraic topology. Portfolio of projects, games and simulations." />
+  <meta property="og:image" content="https://leynamay.com/assets/poster.jpg" />
+  <meta property="og:url" content="https://leynamay.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- Version-pinned: the unpinned URL resolves to latest, so a breaking
+         release upstream would silently remove every icon on the page. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
+  <script defer src="main.js"></script>
+</head>
 
-  <body>
-    <!-- HEADER -->
-    <h1 class="title">Leyna May</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<body>
+  <!-- HEADER -->
+  <div class="header">
+    <h1 class="title">Leyna May-Gurr</h1>
+    <p class="tagline">
+      Software developer &middot; PhD in algebraic topology &middot; Munich
+    </p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- MAIN -->
-    <main>
-      <!-- ABOUT -->
-      <div class="section about">
-        <a class="anchor" id="about"></a>
+  <!-- MAIN -->
+  <main>
+    <!-- ABOUT -->
+    <div class="section section--dark" id="about">
+      <div class="section__inner about">
         <div class="about-left">
           <h2>About me</h2>
           <p>
-            I recently completed a PhD in algebraic topology. Recently, I’ve
-            enjoyed working on personal projects, combining my knowledge of
-            mathematics and programming to create 3D physics games and
-            simulations. I'm currently looking for software development roles,
-            <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer"
-              >see my CV. <i data-feather="external-link"></i
-            ></a>
+            I’m a software developer with a PhD in algebraic topology. I spent
+            my time at university researching operads and
+            hidden symmetries, teaching Maths, Python and R to engineering and maths
+            undergraduates, and publishing work that used Python to generate
+            graphs with specific curvature properties.
           </p>
           <p>
-            In my spare time, I enjoy climbing, arts and crafts, and anything
-            outdoors!
+            These days I build things like 3D physics games and simulations,
+            where I write the collision detection and motion algorithms myself
+            rather than reaching for an engine. My recent work spans
+            JavaScript, Three.js, React, Vue and Node on the front end, and Python,
+            FastAPI and SQLite on the back.
           </p>
+          <p>
+            I’m based in Munich and eligible to work in Germany without visa
+            sponsorship. I’m currently looking for a software development role
+            → <a href="#contact">get in touch</a>.
+          </p>
+          <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">See my CV <i
+              data-feather="external-link"></i></a>
         </div>
-        <img src="assets/poster.jpg" class="about-image" />
+        <img src="assets/poster.jpg" class="about-image" width="320" height="320"
+          alt="Leyna May-Gurr beside her conference research poster, “Hidden Symmetries, Trees, Partitions and Operads”." />
       </div>
+    </div>
 
-      <!-- PROJECTS -->
-      <div class="section projects">
-        <a class="anchor" id="projects"></a>
-        <h2>Projects</h2>
+    <!-- PROJECTS -->
+    <div class="section projects" id="projects">
+      <div class="section__inner">
+        <h2>Software projects</h2>
         <div class="project-cards-container">
           <!-- TILT GAME -->
-          <a
-            id="tilt-game-card"
-            class="project-card"
-            href="https://tilt.leynamay.com"
-          >
+          <article class="project-card">
             <div class="project-card__text">
-              <h3>Tilt game</h3>
+              <h3>
+                <a class="project-card__link" href="https://tilt.leynamay.com">Tilt game</a>
+              </h3>
+              <ul class="tag-list">
+                <li>JavaScript</li>
+                <li>Three.js</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>SQLite</li>
+              </ul>
               <p>
-                Use the mouse to control the tilt of the platform. Get the ball
-                to the green square while avoiding the holes. Each level is
-                successively more difficult, with the addition of more holes.
+                A full-stack browser game built with Three.js. I implemented
+                the physics from scratch rather than using an engine,
+                including ball motion and collision detection against a
+                platform that tilts under mouse control. Scores persist to
+                SQLite and are rendered as a React leaderboard.
               </p>
+              <a class="repo-link" href="https://github.com/LeynaM/tilt-game" target="_blank"
+                rel="noopener noreferrer">View source <i data-feather="github"></i></a>
             </div>
-            <img
-              id="tilt-game-image"
-              src="assets/tilt-game/tilt-game.jpg"
-              class="project-card__image"
-            />
-          </a>
+            <video aria-label="Gameplay clip: a ball rolls across a tilting platform dotted with holes."
+              class="project-card__image project-card__video" poster="assets/tilt-game/tilt-game.jpg" width="640"
+              height="640" muted loop playsinline preload="none">
+              <source src="assets/tilt-game/tilt-game.webm" type="video/webm" />
+              <source src="assets/tilt-game/tilt-game.mp4" type="video/mp4" />
+            </video>
+          </article>
           <!-- BOUNCING BALL -->
-          <a
-            id="bouncing-ball-card"
-            class="project-card"
-            href="https://leynamay.com/ball-on-slope"
-          >
+          <article class="project-card">
             <div class="project-card__text">
-              <h3>Bouncing ball</h3>
+              <h3>
+                <a class="project-card__link" href="https://leynamay.com/ball-on-slope">Bouncing ball</a>
+              </h3>
+              <ul class="tag-list">
+                <li>JavaScript</li>
+                <li>p5.js</li>
+                <li>CSS</li>
+              </ul>
               <p>
-                Click anywhere above the slope to introduce the ball, and use
-                the yellow toggles to change the angle of the slope. You can
-                also change gravity with the slide bar. I wrote a physics
-                simulation to show how the ball reacts.
+                A physics simulation written from first principles in p5.js,
+                modelling collision detection, velocity and acceleration.
+                Gravity and the angle of the slope are adjustable at runtime,
+                so you can watch how each parameter changes the ball’s path.
               </p>
+              <a class="repo-link" href="https://github.com/LeynaM/ball-on-slope" target="_blank"
+                rel="noopener noreferrer">View source <i data-feather="github"></i></a>
             </div>
-            <img
-              id="bouncing-ball-image"
-              src="assets/bouncing-ball/bouncing-ball.jpg"
-              class="project-card__image"
-            />
-          </a>
+            <video aria-label="Simulation clip: a ball bounces down an angled slope."
+              class="project-card__image project-card__video" poster="assets/bouncing-ball/bouncing-ball.jpg"
+              width="640" height="640" muted loop playsinline preload="none">
+              <source src="assets/bouncing-ball/bouncing-ball.webm" type="video/webm" />
+              <source src="assets/bouncing-ball/bouncing-ball.mp4" type="video/mp4" />
+            </video>
+          </article>
           <!-- Noughts and Crosses -->
-          <a
-            id="noughts-and-crosses-game-card"
-            class="project-card"
-            href="https://noughts-and-crosses.leynamay.com"
-          >
+          <article class="project-card">
             <div class="project-card__text">
-              <h3>Noughts and Crosses (work in progress)</h3>
+              <h3>
+                <a class="project-card__link" href="https://noughts-and-crosses.leynamay.com">Noughts and Crosses</a>
+                <span class="badge">In progress</span>
+              </h3>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>WebSockets</li>
+              </ul>
               <p>
-                Classic noughts and crosses game built with Python, FastAPI and
-                websockets.
+                A two-player game served from a FastAPI backend, with game
+                state synchronised between both players over a WebSocket
+                connection.
               </p>
             </div>
-            <img
-              id="noughts-and-crosses-image"
-              src="assets/noughts-and-crosses.jpg"
-              class="project-card__image"
-            />
-          </a>
+            <img src="assets/noughts-and-crosses.jpg" class="project-card__image" loading="lazy"
+              alt="A hand-drawn noughts and crosses grid." />
+          </article>
+        </div>
+
+        <h2 class="heading--spaced">Research &amp; publications</h2>
+        <div class="project-cards-container">
           <!-- PHD -->
-          <a class="project-card" href="assets/thesis.pdf">
+          <article class="project-card">
             <div class="project-card__text">
-              <h3>PhD project</h3>
+              <h3>
+                <a class="project-card__link" href="assets/thesis.pdf">PhD thesis</a>
+              </h3>
               <p>
-                My PhD is in algebraic topology, and my thesis is titled "Hidden
-                Symmetries, Trees and Operads".
+                <em>Hidden Symmetries, Trees and Operads</em> — my doctoral
+                thesis in algebraic topology, completed at the University of
+                Sheffield in 2025.
               </p>
+              <a class="repo-link" href="assets/thesis.pdf">Read the thesis <i data-feather="file-text"></i></a>
             </div>
-            <img src="assets/thesis.jpg" class="project-card__image" />
-          </a>
+            <img src="assets/thesis.jpg" class="project-card__image" width="805" height="804" loading="lazy"
+              alt="A rooted tree diagram with labelled leaves, illustrating how operad operations compose." />
+          </article>
           <!-- GRAPH THEORY -->
-          <a
-            class="project-card"
-            href="https://doi.org/10.1016/j.disc.2019.111767"
-          >
+          <article class="project-card">
             <div class="project-card__text">
-              <h3>Graph theory</h3>
+              <h3>
+                <a class="project-card__link" href="https://doi.org/10.1016/j.disc.2019.111767">Published paper</a>
+              </h3>
+              <ul class="tag-list">
+                <li>Python</li>
+              </ul>
               <p>
-                I used Python to generate local configurations of graphs that
-                had a special curvature property called curvature sharpness,
-                contributing to a publication "Quartic graphs which are
-                Bakry-Émery curvature sharp".
+                <em>Quartic graphs which are Bakry-Émery curvature sharp</em>,
+                in Discrete Mathematics. I wrote a recursive Python algorithm
+                to generate the local graph configurations carrying the
+                curvature property the paper characterises.
               </p>
+              <a class="repo-link" href="https://doi.org/10.1016/j.disc.2019.111767" target="_blank"
+                rel="noopener noreferrer">Read the paper <i data-feather="external-link"></i></a>
             </div>
-            <img src="assets/graph.svg" class="project-card__image" />
-          </a>
+            <img src="assets/graph.svg" class="project-card__image" width="512" height="512" loading="lazy"
+              alt="A symmetric quartic graph, in which every vertex is joined to exactly four others." />
+          </article>
           <!-- Masters -->
-          <a class="project-card" href="assets/masters-thesis.pdf">
+          <article class="project-card">
             <div class="project-card__text">
-              <h3>Masters project</h3>
+              <h3>
+                <a class="project-card__link" href="assets/masters-thesis.pdf">Masters thesis</a>
+              </h3>
               <p>
-                My masters was in low-dimensional differential topology, and my
-                thesis is titled "Morse Theory: Morse-Bott Functions and
-                Homology".
+                <em>Morse Theory: Morse-Bott Functions and Homology</em> — my
+                masters thesis in low-dimensional differential topology,
+                completed at Durham University in 2020.
               </p>
+              <a class="repo-link" href="assets/masters-thesis.pdf">Read the thesis <i data-feather="file-text"></i></a>
             </div>
-            <img src="assets/masters-thesis.jpg" class="project-card__image" />
-          </a>
+            <img src="assets/masters-thesis.jpg" class="project-card__image" width="805" height="804" loading="lazy"
+              alt="A torus with one circle highlighted, illustrating Morse theory on a surface." />
+          </article>
         </div>
       </div>
+    </div>
 
-      <!-- CONTACT -->
-      <div class="section">
-        <a class="anchor" id="contact"></a>
-        <div class="contact">
-          <ul>
-            <li>
-              <a href="mailto:leynamay@gmail.com" class="contact-text"
-                ><i data-feather="mail"></i>leynamay@gmail.com</a
-              >
-              <a href="mailto:leynamay@gmail.com" class="icon-only"
-                ><i data-feather="mail"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/leyna-may"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-text"
-                ><i data-feather="linkedin"></i>LinkedIn</a
-              >
-              <a
-                href="https://www.linkedin.com/in/leyna-may"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="icon-only"
-                ><i data-feather="linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/LeynaM"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-text"
-                ><i data-feather="github"></i>LeynaM</a
-              >
-              <a
-                href="https://github.com/LeynaM"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="icon-only"
-                ><i data-feather="github"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+      <div class="section__inner contact">
+        <h2>Get in touch</h2>
+        <ul>
+          <li>
+            <a href="mailto:leynamay@gmail.com" class="contact-text"><i data-feather="mail"></i>leynamay@gmail.com</a>
+            <a href="mailto:leynamay@gmail.com" class="icon-only"><i data-feather="mail"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/leyna-may" target="_blank" rel="noopener noreferrer"
+              class="contact-text"><i data-feather="linkedin"></i>LinkedIn</a>
+            <a href="https://www.linkedin.com/in/leyna-may" target="_blank" rel="noopener noreferrer"
+              class="icon-only"><i data-feather="linkedin"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/LeynaM" target="_blank" rel="noopener noreferrer" class="contact-text"><i
+                data-feather="github"></i>LeynaM</a>
+            <a href="https://github.com/LeynaM" target="_blank" rel="noopener noreferrer" class="icon-only"><i
+                data-feather="github"></i></a>
+          </li>
+        </ul>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script>
-      feather.replace();
+  <footer>
+    <p>&copy; 2026 Leyna May-Gurr</p>
+  </footer>
+</body>
 
-      // Tilt game gif on ohver
-      const tiltGameCard = document.getElementById("tilt-game-card");
-      const tiltGameImage = document.getElementById("tilt-game-image");
-      let param = 1;
-      tiltGameCard.addEventListener("mouseenter", () => {
-        param++; // increment param to force reload;
-        tiltGameImage.src = "assets/tilt-game/tilt-game.gif" + "?p=" + param;
-      });
-
-      tiltGameCard.addEventListener("mouseleave", () => {
-        tiltGameImage.src = "assets/tilt-game/tilt-game.jpg";
-      });
-
-      // Bouncing ball gif on hover
-      const bouncingBallCard = document.getElementById("bouncing-ball-card");
-      const bouncingBallImage = document.getElementById("bouncing-ball-image");
-      bouncingBallCard.addEventListener("mouseenter", () => {
-        param++; // increment param to force reload;
-        bouncingBallImage.src =
-          "assets/bouncing-ball/bouncing-ball.gif" + "?p=" + param;
-      });
-
-      bouncingBallCard.addEventListener("mouseleave", () => {
-        bouncingBallImage.src = "assets/bouncing-ball/bouncing-ball.jpg";
-      });
-    </script>
-  </body>
 </html>
