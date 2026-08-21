@@ -131,8 +131,8 @@ nav a.active {
 
 .about-image {
   flex-shrink: 0;
-  width: 320px;
-  height: 320px;
+  width: 360px;
+  height: 360px;
   /* The source is 1500x1487, so without this it is squashed to fit. */
   object-fit: cover;
   border-radius: 12px;
@@ -385,7 +385,7 @@ p .feather {
 
   .about-image {
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     height: auto;
     aspect-ratio: 1 / 1;
   }
